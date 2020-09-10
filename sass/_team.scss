@@ -1,0 +1,62 @@
+.section-member{
+    margin: 10rem 0;
+    margin-bottom: 5rem;
+
+    &__box{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr));
+        grid-gap: 2rem;
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 8rem;
+    }
+
+    &__box-1{
+        text-align: center;
+        padding: 3rem;
+
+    }
+
+    &__img{
+        width: 18rem;
+        height: 18rem;
+        border-radius: 100%;
+        object-fit: cover;
+
+        
+    }
+    &__name{
+        font-size: 2rem;
+
+    }
+    &__prof{
+        font-size: 1.4rem;
+    }
+    &__icons{
+        
+    }
+    &__icon{ 
+        font-size: 2rem;
+        &:not(:last-child){
+            margin-right: 1.2rem;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .icon-facebook{
+        color: rgb(6, 6, 170);
+    } 
+    
+    .icon-twitter{
+        color: rgb(24, 184, 196);
+    }
+    .icon-linkedin2{
+        color: rgba(212, 81, 6, 0.726);
+    }
+}
+
+
+

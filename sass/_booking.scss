@@ -1,0 +1,116 @@
+.price {
+    margin: 10rem 0;
+}
+
+
+.pricing-book {
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    margin: 0rem auto;
+    margin-top: 10rem;
+    grid-gap: 3rem;
+    
+    @media only screen and (max-width: $bp-large){
+        width: 90% ;
+    }
+
+    @media only screen and (max-width: $bp-small){
+        width: 60%;
+    }
+    @media only screen and (max-width: 25em){
+        width: 80%;
+    }
+
+    
+
+    &__box {
+        background: rgb(250, 249, 249);
+        padding: 4rem;
+        @include shadow-light-1;
+    }
+
+    &__box-heading {
+        font-size: 1.6rem;
+        font-weight: normal;
+        margin-bottom: 1rem;
+
+        span {
+            border-top: 2px dashed $color-secondary-light;
+            font-weight: bolder;
+            color: $color-secondary-light;
+        }
+        @media only screen and (max-width: $bp-small){
+            font-size: 1.8rem;
+        }
+    }
+
+    &__box-text {
+        font-size: 1.4rem;
+        color: #888;
+        text-align: justify;
+        margin-bottom: 1rem;
+
+        @media only screen and (max-width: $bp-small){
+            font-size:1.5rem;
+        }
+    }
+
+    &__value {
+        font-size: 3rem;
+        color: $color-secondary-light;
+        margin-bottom: 2rem;
+
+        span {
+            font-size: 1.3rem;
+            color: $color-black;
+        }
+    }
+
+    &__value-start {
+        color: $color-primary-light !important;
+    }
+
+
+
+    &__list {}
+
+    &__items {
+        font-size: 1.3rem;
+        margin-left: 1rem;
+
+        &:not(:last-child) {
+            margin-bottom: 0.7rem;
+        }
+
+        @media only screen and (max-width: $bp-small){
+            font-size: 1.3rem;
+            &:not(:last-child) {
+                margin-bottom: 0.9rem;
+            }
+        }
+    }
+
+    &__list-icon {
+        margin-right: 1.3rem;
+        color: green;
+    }
+
+    .icon-cross {
+        color: red;
+    }
+
+    &__btn {
+        width: 80%;
+        margin: auto;
+        margin-top: 4rem;
+    }
+
+    .btn-1 {
+        background-color: $color-secondary-light;
+    }
+}
+
+.border {
+    border-top: 2px dashed $color-primary-light !important;
+}

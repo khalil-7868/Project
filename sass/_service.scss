@@ -1,0 +1,277 @@
+////////////////////////////////////////////////
+/////////           Support
+
+
+.section-support {
+    width: 100%;
+    padding: 10rem;
+    // padding-bottom: 6rem;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    background: #f4f4f4;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    @media only screen and (max-width:$bp-7h){
+        grid-row-gap: 20rem;
+    }
+
+    &__photo {
+        width: 100%;
+        height: 180%;
+        background: url('../img/back.png') ;
+        background-size: 45%;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 2rem;
+    }
+
+    &__img {
+        width: 70%;
+    }
+
+    &__content {
+        width: 80%;
+        padding-left: 5rem;
+        margin: 0 auto;
+        margin-top: 2rem;
+
+        @media only screen and (max-width:$bp-small){
+            padding: 2rem;
+            width: 95%;
+        }
+    }
+
+    &__heading {
+        font-size: 1.6rem;
+        color: $color-primary-dark;
+        margin-bottom: 1rem;
+    }
+
+    &__heading-1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+
+        @media only screen and (max-width:$bp-small){
+            font-size: 2.4rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        text-align: justify;
+        color: #888;
+        margin-bottom: 2rem;
+    }
+
+    &__box {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+        grid-gap: 2rem;
+
+        @media only screen and (max-width:$bp-small){
+            grid-template-columns: 1fr;
+            padding: 1rem 3rem;
+        }
+
+    }
+
+
+    &__box-1 {
+        // padding: 1rem;
+
+    }
+
+    .icon-support{
+        display: inline-block;
+        font-size: 2rem;
+        color: $color-primary-dark;
+    }
+    
+    .heading-chat{
+        display: inline-block;
+        font-size: 1.6rem;
+        margin-left: 1rem;
+
+    }
+
+    .text-chat{
+        font-size: 1.5rem;
+        color: #888;
+        margin-top: 1rem;
+    }
+
+}
+
+
+
+
+///////////////////////////////////////////////
+////////////////////            Section Info 
+
+.section-info{
+    // height: 100vh;
+    padding: 10rem 5rem;
+
+    @media only screen and (max-width: $bp-large){
+        padding: 10rem 5rem;
+
+    }
+
+
+    &__header{
+        text-align: center;
+    }
+
+    &__heading3{
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        
+    }
+
+    &__heading1{
+        font-size: 4rem;
+        color: transparent;
+        background-image: linear-gradient(to right,$color-primary-light,$color-primary-dark);
+        display: inline-block;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+
+        @media only screen and (max-width: $bp-small){
+            font-size: 2.4rem;
+    
+        }
+    }
+
+    &__text{
+        font-size: 1.6rem;
+        width: 60%;
+        margin: 0 auto;
+        color: #888;
+        margin-bottom: 5rem;
+
+        @media only screen and (max-width: $bp-large){
+            width: 95%;
+        }
+        
+        @media only screen and (max-width: $bp-small){
+            text-align: justify;
+            width: 90%;
+        }
+    }
+
+    
+}
+
+.box-container{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    grid-gap: 2.5rem;
+    width: 80%;
+    margin:  0 auto;
+
+    @media only screen and (max-width: $bp-large){
+        width: 95%;
+    }
+
+    &__box{
+        text-align: center;
+        padding: 1.5rem;
+        @include shadow-light-1;
+
+        @media only screen and (max-width: 542px){
+            grid-column:  1;
+            padding: 1.5rem 5rem;
+        }
+    }
+    
+    &__box-3{
+        
+        @media only screen and (max-width: 783px){
+            grid-column:  1/-1;
+            padding: 3rem 12rem;
+        }
+                        @media only screen and (max-width: 542px){
+                            grid-column:  1;
+                            padding: 1.5rem 5rem;
+                        }
+    }
+
+    &__heading{
+        font-size: 1.4rem;
+    }
+
+    &__text{
+        font-size: 1.4rem;
+        text-align: justify;
+
+    }
+}
+
+
+
+//////////////////////////////////////////
+////////////////////         Section Progress
+
+
+.section-progress{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    width: 90%;
+    margin: 5rem auto;
+    border-radius: 3px;
+    text-align: center;
+    grid-gap: 2rem;
+    background: linear-gradient(to right,$color-primary-light,$color-primary-dark); 
+    padding: 5rem;
+
+    @media only screen and (max-width:$bp-medium){
+        padding: 3rem;
+    }
+    @media only screen and (max-width:$bp-7h){
+        width: 95%;
+        grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    }
+
+    &__box{
+        padding: 7rem;
+        color: $color-white;
+
+        &:not(:last-child){ 
+            border-right: 1px solid #944b02;
+        } 
+
+        @media only screen and (max-width:$bp-9h){
+            padding: 4rem;
+        }
+        @media only screen and (max-width:$bp-7h){
+            &:not(:last-child){ 
+                border-right: none;
+            } 
+        }
+        
+        
+    }
+
+    &__box-icon{
+        font-size: 3rem;
+    }
+
+    &__box-count{
+        font-size: 3rem;
+
+    }
+ 
+    &__box-text{
+        font-size: 1.4rem;
+    }
+}
+

@@ -1,0 +1,164 @@
+///////////////////////////////////////
+//Variables
+
+$font-primary: Josefin Sans;
+$font-secondary: Nunito;
+$font-heading: Merienda;
+
+/////////////////////////////////////////
+////////////Colors
+
+$color-black : #000;
+$color-white : #fff;
+
+$color-grey-light-1: #d2d3d7;
+$color-grey-light-2: #7f8a89;
+
+$color-grey-dark-1: #343839 ;
+$color-grey-dark-2: #2b2c2a ;
+
+$color-primary-light: #e08609;
+$color-primary-dark: #c96604;
+
+//    $color-primary-light: #ff3366;
+//     $color-primary-dark: #ba265d;
+
+$color-secondary-light: #064bed;
+$color-secondary-dark: #263574 ;
+
+///////////////////////////////////////////////////
+/////////////Utilitie Classes
+
+.m{
+
+    ////Top Margin
+    &-t-6{
+        margin-top: 6rem;
+    }
+    &-t-4{
+        margin-top: 4rem;
+    }
+    &-t-2{
+        margin-top: 2rem;
+    }
+    &-t-1{
+        margin-top: 1rem;
+    }
+
+
+    /////Margin Bottom
+
+    &-b-6{
+        margin-bottom: 6rem;
+    }
+    &-b-4{
+        margin-bottom: 4rem;
+    }
+    &-b-2{
+        margin-bottom: 2rem;
+    }
+    &-b-1{
+        margin-bottom: 1rem;
+    }
+
+}
+
+////////////////////////////////////
+/////////Box Shadows
+
+@mixin shadow-light-1 {
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.1);
+}
+@mixin shadow-light-2 {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+}
+@mixin shadow-light-3 {
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.4);
+}
+
+
+//////////////////////////////////
+///////////Center Itmes
+
+@mixin ab-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+
+////////////////////////////////////////
+//////////////Genrel
+
+li{
+    list-style: none;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family: $font-heading;
+    text-transform: uppercase;
+}
+
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+//////////////////////////////////////////
+////////Responsive Steps
+
+$bp-largest : 75em ;            //1200px
+$bp-largest-1 : 68.75em;      //1100px
+$bp-large: 62.5em;          //1000px
+$bp-9h: 56.25em;                //900px
+$bp-medium: 50em;         //800px
+$bp-7h : 43.75em;               //700px
+$bp-small: 37.5em;          //600px
+
+
+
+
+
+
+/////////////////////////////////
+//////Genral Reset
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    box-sizing: border-box;
+    line-height: 1.6;
+    font-family: $font-secondary; 
+} 
+
+html{
+    font-size: 62.5%;
+
+    @media only screen and (max-width:$bp-largest){
+        font-size: 58%;
+    }
+    @media only screen and (max-width:$bp-large){
+        font-size: 52%;
+    }
+}
+

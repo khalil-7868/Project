@@ -1,0 +1,231 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 2rem;
+    position: relative;
+    color: $color-white;
+    height: 15%;
+    flex-wrap: wrap;
+
+    .item {
+        align-self: center;
+    }
+
+    .list {
+        display: inline-block;
+        position: relative;
+        margin: 0rem 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        justify-self: center;
+        align-items: center;
+        align-content: center;
+        justify-items: center;
+        height: 100%;
+
+    }
+
+    .list-1 {
+        align-self: center;
+        align-content: center;
+        justify-self: center;
+
+        @media only screen and (max-width:$bp-largest-1) {
+            margin-top: 1rem;
+        }
+
+        @media only screen and (max-width:$bp-small) {
+            display: none;
+        }
+    }
+
+    .list-2 {
+        @media only screen and (max-width:$bp-largest-1) {
+            display: none;
+        }
+    }
+
+    .link {
+        padding: .5rem;
+        font-size: 1.6rem;
+        color: $color-white;
+        font-family: $font-primary;
+    }
+
+
+    .logo {
+        font-size: 2.5rem;
+
+        @media only screen and (max-width: $bp-largest-1) {
+            order: -1;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            margin-top: 1rem;
+        }
+
+        &-icon {
+            display: inline-block;
+            font-size: 4rem;
+            background-color: #fff;
+            padding: 1rem;
+            border-radius: 100%;
+        }
+
+        &-heading {
+            display: inline-block;
+        }
+
+    }
+}
+
+.right-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.toggle-list {
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4rem;
+    transition: all 01s;
+    position: relative;
+}
+
+
+
+.toggle {
+    width: 4rem;
+    height: 2px;
+    background-color: $color-white;
+    display: block;
+    transition: all 0.3s;
+    @include ab-center;
+    z-index: 470;
+}
+
+.check {
+    width: 6rem;
+    height: 6rem;
+    z-index: 500;
+    opacity: 0;
+    @include ab-center;
+    cursor: pointer;
+}
+
+.check:checked~.toggle-bar {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0rem);
+}
+
+.check:checked+.toggle {
+    width: 0;
+}
+
+.check:checked+.toggle::before {
+    transform: rotate(45deg) translate(-2rem, 2px);
+    transform-origin: left;
+
+}
+
+.check:checked+.toggle::after {
+    transform: rotate(-45deg) translate(-2rem, -2px);
+    transform-origin: left;
+
+}
+
+.toggle::before,
+.toggle::after {
+    content: "";
+    width: 4rem;
+    height: 100%;
+    background-color: $color-white;
+    display: block;
+    transition: all 0.3s;
+
+}
+
+.toggle::before {
+    transform: translateY(-1.3rem);
+}
+
+.toggle::after {
+    transform: translateY(1.2rem);
+}
+
+
+.link-1::before,
+.link-2::before {
+    content: "";
+    background-color: currentColor;
+    width: 0%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: -.5rem;
+    left: 0;
+    transition: all 0.4s;
+
+}
+
+.link:hover::before {
+    width: 100%;
+}
+
+
+
+
+////////////////////////////////////
+//////      Toggle Navigation
+
+.toggle-bar {
+    background: linear-gradient(rgba(19, 18, 18, 0.733), rgba(24, 22, 22, 0.767));
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 0.4s;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(10rem);
+    z-index: 355;
+}
+
+.toggle__item {
+    transition: all 01s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    background: linear-gradient(to left, $color-primary-light, $color-primary-dark);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 400;
+
+    @media only screen and (max-width:$bp-7h) {
+        width: 60%;
+    }
+
+    @media only screen and (max-width:$bp-small) {
+        width: 60%;
+    }
+}
+
+.toggle__link {
+    list-style: none;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: josefin sans;
+
+}
+
+.toggle__link:not(:last-child) {
+    margin-bottom: 1.2rem;
+}
